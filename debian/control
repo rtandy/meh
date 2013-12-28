@@ -1,0 +1,19 @@
+Source: meh
+Section: graphics
+Priority: extra
+Build-Depends: debhelper (>= 9), libx11-dev, libxext-dev, libgif-dev, 
+ libjpeg-dev, libpng-dev
+Standards-Version: 3.9.5.0
+Maintainer: Ryan Tandy <ryan@nardis.ca>
+Homepage: http://www.johnhawthorn.com/meh/
+
+Package: meh
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Suggests: imagemagick
+Description: simple, minimalist, super fast image viewer
+ meh is a fast and lightweight keyboard-oriented image viewer, similar to feh 
+ or sxiv. It has built-in support for BMP, GIF, JPEG, netpbm, and PNG formats, 
+ and can optionally use ImageMagick's convert to display many other formats 
+ including SVG. Images are displayed scaled to the size of the window with 
+ their aspect ratio preserved.
