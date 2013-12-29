@@ -1,9 +1,10 @@
 #!/usr/bin/make -f
 
-# test suite known broken: https://github.com/jhawthorn/meh/issues/3
-DEB_BUILD_OPTIONS += nocheck
-
 export PREFIX = /usr
 
 %:
 	dh $@
+
+override_dh_auto_test:
+	# test suite known broken, not running tests
+	# https://github.com/jhawthorn/meh/issues/3
